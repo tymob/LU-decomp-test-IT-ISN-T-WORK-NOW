@@ -35,23 +35,30 @@ void mynumerical::myswap_h(int from, int to,int calc_num)
 }
 void mynumerical::myswap_b(int from, int to)
 {
-	std::vector <float> temp;
-	temp.push_back(place_one(0, to));
-	v.at(place_one_pc(0, to)) = v.at(place_one_pc(0, from));
-	v.at(place_one_pc(0, from)) = v.at(place_one_pc(0, to));
+
+	float temp=b.at(place_one_pc(to, 0));
+	b.at(place_one_pc(to, 0)) = b.at(place_one_pc(from,0 ));
+	b.at(place_one_pc(from, 0)) = temp;
 
 }
 void mynumerical::forward_calc(int remain, int calc_num)
 {
 	std::vector <float> change_values;
 
+	change_values = v;
+	int first = remain;
+
+
+
 	for (int i = remain + 1; i <= iheight; i++)
 	{
 		change_values = v;
-		int first = remain;
+		first = remain;
 		int second = i;
 		//float multiply_value1 = v.at(place_one_pc(calc_num, second));
+
 		float multiply_value2 = v.at(place_one_pc(calc_num, first))/ v.at(place_one_pc(calc_num, second));
+		b.at(place_one_pc(second, 0)) = b.at(place_one_pc(second, 0))*multiply_value2 - b.at(place_one_pc(first, 0));
 		U.at(place_one_pc(calc_num, second)) = multiply_value2;
 		for (int k = 0; k <= iwidth; k++)
 		{
@@ -61,8 +68,10 @@ void mynumerical::forward_calc(int remain, int calc_num)
 			v.at(place_one_pc(k, second)) = change_values.at(place_one_pc(k, second));
 			
 		}
-
+	
 	}
+	calcT1(first, calc_num);
+
 }
 void mynumerical::U_ajast(int ajast)
 {
@@ -70,6 +79,26 @@ void mynumerical::U_ajast(int ajast)
 	U.resize(ajast*ajast);
 	for (int i = 0; i < ajast; i++)
 		U.at(place_one_pc(i, i)) = 1;
+}
+void mynumerical::calcT1(int height,int width)
+{
+	float To1value = v.at(place_one_pc(width,height));
+	std::vector <float> values;
+	values.push_back(b.at(place_one_pc(height, 0)));
+	for (int i = 0; i <= iwidth; i++)
+	{
+		values.push_back(v.at(place_one_pc(i, height)));
+	}
+	for (int i = 0; i < values.size(); i++)
+	{
+		values.at(i) = values.at(i) / To1value;
+	}
+	b.at(place_one_pc(height, 0)) = values.at(0);
+	for (int i = 0; i <= iwidth; i++)
+	{
+		v.at(place_one_pc(i, height)) = values.at(i + 1);
+	}
+
 }
 void mynumerical::U_calc(int size)
 {

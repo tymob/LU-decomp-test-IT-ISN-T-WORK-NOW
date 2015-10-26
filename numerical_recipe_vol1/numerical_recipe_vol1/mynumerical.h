@@ -25,7 +25,7 @@ public:
 	std::vector <float> U;
 	void U_ajast(int ajast);
 	std::vector <int> before_z;
-
+	void calcT1(int height, int width);
 	
 };
 
