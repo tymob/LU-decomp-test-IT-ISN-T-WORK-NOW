@@ -1,0 +1,17 @@
+﻿2015/10/27 1:19:46 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\T\Desktop\Numerical\Numerical\Numerical\numerical_recipe_vol1\numerical_recipe_vol1\numerical_recipe_vol1.vcxproj" (Build ターゲット)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I./include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>c:\users\t\desktop\numerical\numerical\numerical\numerical_recipe_vol1\numerical_recipe_vol1\main.cpp(46): warning C4018: '<' : signed と unsigned の数値を比較しようとしました。
+     1>c:\users\t\desktop\numerical\numerical\numerical\numerical_recipe_vol1\numerical_recipe_vol1\main.cpp(55): warning C4244: '引数' : 'float' から 'int' への変換です。データが失われる可能性があります。
+     1>c:\users\t\desktop\numerical\numerical\numerical\numerical_recipe_vol1\numerical_recipe_vol1\main.cpp(56): warning C4244: '引数' : 'float' から 'int' への変換です。データが失われる可能性があります。
+     1>c:\users\t\desktop\numerical\numerical\numerical\numerical_recipe_vol1\numerical_recipe_vol1\main.cpp(83): warning C4018: '<' : signed と unsigned の数値を比較しようとしました。
+     1>c:\users\t\desktop\numerical\numerical\numerical\numerical_recipe_vol1\numerical_recipe_vol1\main.cpp(85): warning C4018: '>' : signed と unsigned の数値を比較しようとしました。
+     1>c:\users\t\desktop\numerical\numerical\numerical\numerical_recipe_vol1\numerical_recipe_vol1\main.cpp(110): error C2143: 構文エラー : ')' が ';' の前にありません。
+     1>c:\users\t\desktop\numerical\numerical\numerical\numerical_recipe_vol1\numerical_recipe_vol1\main.cpp(110): warning C4244: '引数' : 'float' から 'unsigned int' への変換です。データが失われる可能性があります。
+     1>プロジェクト "C:\Users\T\Desktop\Numerical\Numerical\Numerical\numerical_recipe_vol1\numerical_recipe_vol1\numerical_recipe_vol1.vcxproj" (Build ターゲット) のビルドが終了しました -- 失敗。
+
+ビルドに失敗しました。
+
+経過時間 00:00:00.44
