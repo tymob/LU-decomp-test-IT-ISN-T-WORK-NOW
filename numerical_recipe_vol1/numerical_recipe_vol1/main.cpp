@@ -29,17 +29,6 @@ int main()
 	bool check_ans;
 	for (calc_num = 0; calc_num <= my.iwidth; calc_num++)
 	{
-		check_ans = false;
-		for (int check = calc_num; check >= 0; check--)
-		{
-			if (my.v.at(my.place_one_pc(check_ans,calc_num)) == 0)check_ans = true;
-			else { check_ans = false; break; }
-		}
-		if (check_ans == true)
-		{
-			my.myswap_h(calc_num, my.v.size()-1, calc_num);
-			my.myswap_b(calc_num, my.v.size() - 1);
-		}
 		p.pivot = glm::vec2(calc_num , calc_num);
 		for (int i = calc_num; i <= my.iheight; i++)pivot_s.push_back(fabs(my.v.at(my.place_one_pc(calc_num, i))));//”äŠrƒŠƒXƒg
 	std::sort(pivot_s.begin(), pivot_s.end());//sort
